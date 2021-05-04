@@ -75,14 +75,18 @@ static const unsigned char temp_binary_data_1[] =
 "      </Palettes>\r\n"
 "    </Style>\r\n"
 "  </Styles>\r\n"
-"  <View id=\"root\" resizable=\"1\" resize-corner=\"1\" width=\"500\" height=\"200\">\r\n"
+"  <View id=\"root\" resizable=\"0\" resize-corner=\"0\" width=\"1000\" height=\"300\">\r\n"
 "    <Slider caption=\"Threshold\" parameter=\"THRESHOLD\" lookAndFeel=\"Skeuomorphic\"\r\n"
-"            min-value=\"0\" max-value=\"100\" slider-textbox=\"textbox-above\"\r\n"
-"            slider-type=\"linear-vertical\" value=\"0\" flex-align-self=\"stretch\"/>\r\n"
+"            min-value=\"0\" max-value=\"100\" slider-textbox=\"no-textbox\" slider-type=\"linear-vertical\"\r\n"
+"            value=\"output\" flex-align-self=\"stretch\" flex-shrink=\"1\" flex-grow=\"0.5\"/>\r\n"
 "    <Slider caption=\"Ratio\" parameter=\"RATIO\" lookAndFeel=\"Skeuomorphic\"/>\r\n"
 "    <Slider caption=\"Attack\" parameter=\"ATTACK\" lookAndFeel=\"Skeuomorphic\"/>\r\n"
 "    <Slider caption=\"Release\" parameter=\"RELEASE\" lookAndFeel=\"Skeuomorphic\"/>\r\n"
 "    <Slider caption=\"Gain\" parameter=\"GAIN\" lookAndFeel=\"Skeuomorphic\"/>\r\n"
+"    <Meter source=\"outputMeter\" bar-fill-color=\"FFFF0000\" background-color=\"FF000000\"\r\n"
+"           bar-background-color=\"FFFFFFFF\" tickmark-color=\"FF66FF00\" flex-order=\"0\"\r\n"
+"           flex-shrink=\"1\" flex-grow=\"0.6\" caption=\"Output Volume\" lookAndFeel=\"LookAndFeel_V4\"\r\n"
+"           tab-color=\"\"/>\r\n"
 "  </View>\r\n"
 "</magic>\r\n"
 "\0";
@@ -101,7 +105,7 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
     switch (hash)
     {
         case 0x6bb289bd:  numBytes = 1294; return Compressor_xml;
-        case 0x43788964:  numBytes = 1639; return compressor1_xml;
+        case 0x43788964:  numBytes = 1970; return compressor1_xml;
         default: break;
     }
 

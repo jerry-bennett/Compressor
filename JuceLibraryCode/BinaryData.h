@@ -12,7 +12,7 @@ namespace BinaryData
     const int            Compressor_xmlSize = 1294;
 
     extern const char*   compressor1_xml;
-    const int            compressor1_xmlSize = 1639;
+    const int            compressor1_xmlSize = 1970;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 2;

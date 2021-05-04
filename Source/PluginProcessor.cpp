@@ -194,7 +194,7 @@ void CompressorAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuf
             if(in_dB < (threshValue)*-1){
                 scGain = in_dB;
             }else{
-                scGain = (threshValue * -1) + (in_dB - threshValue)/ratioValue;
+                scGain = (threshValue * -1) + (in_dB - (threshValue*-1))/ratioValue;
             }
             
             gainChange_dB = scGain - in_dB;
